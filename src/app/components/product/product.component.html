@@ -1,0 +1,397 @@
+<!-- header_section - start
+		================================================== -->
+    <header class="header_section sticky_header header_default clearfix">
+      <div class="header_top bg_light clearfix">
+        <div class="maxw_1420 container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <ul class="header_contact_info ul_li clearfix">
+                <li><i class="far fa-map-marker-alt"></i> 20 Main Street, USA</li>
+                <li><i class="far fa-envelope-open"></i> info@ggoldenservice.com</li>
+                <li><i class="far fa-clock"></i> Sun - Monday, 09 am - 04 pm</li>
+              </ul>
+            </div>
+    
+            <div class="col-lg-4">
+              <ul class="header_items_list ul_li_right clearfix">
+                <li>
+                  <div class="header_social_links d-flex align-items-center">
+                    <span class="social_title text-white">Social Links:</span>
+                    <ul class="primary_social_links ul_li clearfix">
+                      <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
+                      <li><a href="#!"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="header_bottom bg_default_blue">
+        <div class="maxw_1420 container">
+          <div class="row align-items-center">
+    
+            <div class="col-lg-3">
+              <div class="brand_logo">
+                <a href="/">
+                  <img src="assets/images/logo/logo-3.png"   
+                    alt="logo_not_found">
+                </a>
+    
+                <ul class="mobilemenu_btns_group ul_li_right clearfix">
+                  <li>
+                    <button type="button" class="search_btn" data-toggle="collapse" data-target="#search_body_collapse"
+                      aria-expanded="false" aria-controls="search_body_collapse">
+                      <i class="fal fa-search"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="mobile_menu_btn"><i class="fal fa-bars"></i></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-6">
+              <nav class="main_menu clearfix">
+                <ul class="ul_li_center clearfix">
+                  <li class="active">
+                    <a href="/">Home</a>
+                  </li>
+                  <li><a href="/about">About</a></li>
+                  
+                  <li class="has_child">
+                    <a href="/products/category/waste-papers">Paper Scraps</a>
+                    <ul class="submenu">
+                      <li *ngFor="let product of waste_products"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+                    </ul>
+                  </li>
+                  <li class="has_child">
+                    <a href="/products/category/plastic-scrap">PLastic Scraps</a>
+                    <ul class="submenu">
+                      <li *ngFor="let product of plastic_products"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+                    </ul>
+                  </li>
+                  <li class="has_child">
+                    <a href="/products/category/metal-scrap">Metal Scraps</a>
+                    <ul class="submenu">
+                      <li *ngFor="let product of metal_products"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+    
+            <div class="col-lg-3">
+              <ul class="header_btns_group ul_li_right clearfix">
+                <li>
+                  <button type="button" class="action_btn search_btn bg_default_purple" data-toggle="collapse"
+                    data-target="#search_body_collapse" aria-expanded="false" aria-controls="search_body_collapse">
+                    <i class="fal fa-search"></i>
+                  </button>
+                </li>
+                <li>
+                  <a class="custom_btn bg_default_yellow" href="/contact">
+                    get a quote
+                    <span><i class="fal fa-arrow-right"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+      <div id="search_body_collapse" class="search_body_collapse collapse">
+        <div class="search_body">
+          <div class="container maxw_1420">
+            <form action="#" #ngSearch="ngForm" (ngSubmit)="search()">
+              <div class="form_item m-0">
+                <input type="search" name="search" [(ngModel)]="searchString" placeholder="Type here...">
+                <button type="submit"><i class="fal fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header_section - end
+        ================================================== -->
+
+<main>
+
+  <!-- sidebar mobile menu - start
+			================================================== -->
+	<div class="sidebar-menu-wrapper">
+		<div class="sidebar_mobile_menu">
+
+			<span class="close_btn"><i class="fal fa-times"></i></span>
+
+			<div class="mobile_menu_list clearfix">
+				<ul class="ul_li_block clearfix">
+					<li class="active">
+						<a href="/">Home</a>
+					</li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Conatct</a></li>
+					<li class="dropdown">
+						<a href="/products/category/waste-papers" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Waste Papers</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let product of waste_products"><a
+									href="/category/{{product.category}}/product/{{product.id}}">{{product.id}}</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="/products/category/paper-type" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Paper Types</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let product of type_products"><a
+									href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="/products/category/copy-paper" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Copy Papers</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let product of copy_products"><a
+									href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<div class="overlay"></div>
+	</div>
+	<!-- sidebar mobile menu - end
+			================================================== -->
+
+  <!-- breadcrumb_section - start
+			================================================== -->
+  <section class="breadcrumb_section d-flex align-items-center clearfix"
+    data-background="assets/images/breadcrumb/jump.jpg">
+    <div class="container">
+      <div class="row align-items-center justify-content-lg-between">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay=".1s">
+          <h1 class="page_title mb-0">{{pet.name}}</h1>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay=".1s">
+          <ul class="breadcrumb_nav ul_li_right clearfix">
+            <li><a href="/">Home</a></li>
+            <li>Category</li>
+            <li>{{pet.id}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- breadcrumb_section - end
+			================================================== -->
+
+
+  <!-- details_section - start
+			================================================== -->
+  <section class="details_section shop_details sec_ptb_130 pt-0 bg_gray clearfix">
+    <div class="shop_container">
+      <div class="container">
+
+        <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+          <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12 wow fadeInUp2" data-wow-delay=".1s">
+            <div class="details_image clearfix">
+              <div class="tab-content">
+                <div id="image_1" class="tab-pane active">
+                  <img src="{{pet.image}}" alt="{{pet.name}}">
+                </div>
+                <!-- <div id="image_2" class="tab-pane fade">
+                  <img src="assets/images/details/shop/img_01.jpg" alt="image_not_found">
+                </div>
+                <div id="image_3" class="tab-pane fade">
+                  <img src="assets/images/details/shop/img_01.jpg" alt="image_not_found">
+                </div> -->
+              </div>
+
+              <ul class="nav ul_li_block clearfix" role="tablist">
+                <li>
+                  <a class="active" data-toggle="tab" href="#image_1">
+                    <img src="{{pet.image}}" alt="{{pet.name}}">
+                  </a>
+                </li>
+                <!-- <li>
+                  <a data-toggle="tab" href="#image_2">
+                    <img src="assets/images/details/shop/img_03.jpg" alt="image_not_found">
+                  </a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#image_3">
+                    <img src="assets/images/details/shop/img_04.jpg" alt="image_not_found">
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-8 col-sm-10 col-xs-12 wow fadeInUp2" data-wow-delay=".1s">
+            <div class="details_content">
+              <h2 class="item_title mb_15">{{pet.name}}</h2>
+              <ul class="rating_star ul_li mb_30 clearfix">
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+              <!-- <span class="price_text mb_30"><strong>$89.00</strong> <del>$100.00</del></span> -->
+              <p class="mb_15" [innerHTML]="pet?.description_1">
+              </p>
+              <!-- <p class="mb_30">
+                Perspiciatis unde omnis iste sit voluptate accusantium dolorem que laudantiu totam rem aperiaaquipsa
+                quae
+                ab illo
+              </p> -->
+              <ul class="quantity_cart ul_li mb_30 clearfix">
+                <!-- <li>
+                  <div class="quantity_input">
+                    <form action="#">
+                      <span class="input_number_decrement">–</span>
+                      <input class="input_number" type="text" value="1">
+                      <span class="input_number_increment">+</span>
+                    </form>
+                  </div>
+                </li> -->
+                <li><a href="/checkout" (click)="addToCart()" class="addtocart_btn custom_btn bg_default_orange">Inquire Now!</a></li>
+              </ul>
+              <div class="share_links d-flex align-items-center clearfix">
+                <span class="social_title">Shore Now</span>
+                <ul class="primary_social_links ul_li clearfix">
+                  <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="#!"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- <div class="shop_description clearfix">
+          <ul class="nav description_tabnav ul_li wow fadeInUp2 clearfix" data-wow-delay=".1s" role="tablist">
+            <li>
+              <a class="active" data-toggle="tab" href="#description_tab">Description</a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#additionalinfo_tab">Additional information</a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#reviews_tab">Reviews (1)</a>
+            </li>
+          </ul>
+
+          <div class="tab-content wow fadeInUp2" data-wow-delay=".3s">
+            <div id="description_tab" class="tab-pane active">
+              <p class="mb_30">
+                Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur xcepteur sint occaecat cupidatat non proident, sunt.
+              </p>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cdolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis
+                et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudinInteger in mauris eu
+                nibh
+                euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.
+                Ut
+                ullamcorper,
+              </p>
+            </div>
+            <div id="additionalinfo_tab" class="tab-pane fade">
+              <p class="mb_30">
+                Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur xcepteur sint occaecat cupidatat non proident, sunt.
+              </p>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cdolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis
+                et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudinInteger in mauris eu
+                nibh
+                euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.
+                Ut
+                ullamcorper,
+              </p>
+            </div>
+            <div id="reviews_tab" class="tab-pane fade">
+              <p class="mb_30">
+                Sorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur xcepteur sint occaecat cupidatat non proident, sunt.
+              </p>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cdolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis
+                et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudinInteger in mauris eu
+                nibh
+                euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor.
+                Ut
+                ullamcorper,
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr> -->
+        
+        <h2><strong>Related Products...</strong></h2>
+        <div class="row mt__30 justify-content-left">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".1s" *ngFor="let pet of pets">
+            <div class="product_card text-center bg_gray">
+              <a class="item_image" target="_blank" href="/category/{{pet.category}}/product/{{pet.id}}">
+                <img src="{{pet.image}}" alt="image_not_found">
+              </a>
+              <div class="item_content">
+                <h3 class="item_title">{{pet.name}}</h3>
+                <!-- <span class="item_price">$25.83</span> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- details_section - end
+			================================================== -->
+</main>

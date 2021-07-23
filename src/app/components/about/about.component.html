@@ -1,0 +1,544 @@
+<!-- header_section - start
+		================================================== -->
+    <header class="header_section sticky_header header_default clearfix">
+      <div class="header_top bg_light clearfix">
+        <div class="maxw_1420 container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <ul class="header_contact_info ul_li clearfix">
+                <li><i class="far fa-map-marker-alt"></i> 20 Main Street, USA</li>
+                <li><i class="far fa-envelope-open"></i> info@ggoldenservice.com</li>
+                <li><i class="far fa-clock"></i> Sun - Monday, 09 am - 04 pm</li>
+              </ul>
+            </div>
+    
+            <div class="col-lg-4">
+              <ul class="header_items_list ul_li_right clearfix">
+                <li>
+                  <div class="header_social_links d-flex align-items-center">
+                    <span class="social_title text-white">Social Links:</span>
+                    <ul class="primary_social_links ul_li clearfix">
+                      <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
+                      <li><a href="#!"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="header_bottom bg_default_blue">
+        <div class="maxw_1420 container">
+          <div class="row align-items-center">
+    
+            <div class="col-lg-3">
+              <div class="brand_logo">
+                <a href="/">
+                  <img src="assets/images/logo/logo-3.png"   
+                    alt="logo_not_found">
+                </a>
+    
+                <ul class="mobilemenu_btns_group ul_li_right clearfix">
+                  <li>
+                    <button type="button" class="search_btn" data-toggle="collapse" data-target="#search_body_collapse"
+                      aria-expanded="false" aria-controls="search_body_collapse">
+                      <i class="fal fa-search"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="mobile_menu_btn"><i class="fal fa-bars"></i></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-6">
+              <nav class="main_menu clearfix">
+                <ul class="ul_li_center clearfix">
+                  <li class="active">
+                    <a href="/">Home</a>
+                  </li>
+                  <li><a href="/about">About</a></li>
+                  
+                  <li class="has_child">
+                    <a href="/products/category/waste-papers">Paper Scraps</a>
+                    <ul class="submenu">
+                      <li *ngFor="let product of waste_products"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+                    </ul>
+                  </li>
+                  <li class="has_child">
+                    <a href="/products/category/plastic-scrap">Plastic Scraps</a>
+                    <ul class="submenu">
+                      <li *ngFor="let product of plastic_products"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+                    </ul>
+                  </li>
+                  <li class="has_child">
+                    <a href="/products/category/metal-scrap">Metal Scraps</a>
+                    <ul class="submenu">
+                      <li *ngFor="let product of metal_products"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+    
+            <div class="col-lg-3">
+              <ul class="header_btns_group ul_li_right clearfix">
+                <li>
+                  <button type="button" class="action_btn search_btn bg_default_purple" data-toggle="collapse"
+                    data-target="#search_body_collapse" aria-expanded="false" aria-controls="search_body_collapse">
+                    <i class="fal fa-search"></i>
+                  </button>
+                </li>
+                <li>
+                  <a class="custom_btn bg_default_yellow" href="/contact">
+                    get a quote
+                    <span><i class="fal fa-arrow-right"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+      <div id="search_body_collapse" class="search_body_collapse collapse">
+        <div class="search_body">
+          <div class="container maxw_1420">
+            <form action="#" #ngSearch="ngForm" (ngSubmit)="search()">
+              <div class="form_item m-0">
+                <input type="search" name="search" [(ngModel)]="searchString" placeholder="Type here...">
+                <button type="submit"><i class="fal fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header_section - end
+        ================================================== -->
+
+
+
+
+<main>
+
+  <!-- sidebar mobile menu - start
+			================================================== -->
+	<div class="sidebar-menu-wrapper">
+		<div class="sidebar_mobile_menu">
+
+			<span class="close_btn"><i class="fal fa-times"></i></span>
+
+			<div class="mobile_menu_list clearfix">
+				<ul class="ul_li_block clearfix">
+					<li class="active">
+						<a href="/">Home</a>
+					</li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Conatct</a></li>
+					<li class="dropdown">
+						<a href="/products/category/waste-papers" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Waste Papers</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let product of waste_products"><a
+									href="/category/{{product.category}}/product/{{product.id}}">{{product.id}}</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="/products/category/paper-type" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Paper Types</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let product of type_products"><a
+									href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="/products/category/copy-paper" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Copy Papers</a>
+						<ul class="dropdown-menu">
+							<li *ngFor="let product of copy_products"><a
+									href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<div class="overlay"></div>
+	</div>
+	<!-- sidebar mobile menu - end
+			================================================== -->
+
+  <!-- breadcrumb_section - start
+			================================================== -->
+  <section class="breadcrumb_section d-flex align-items-center clearfix"
+    data-background="assets/images/breadcrumb/jump.jpg">
+    <div class="container">
+      <div class="row align-items-center justify-content-lg-between">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay=".1s">
+          <h1 class="page_title mb-0">About Us</h1>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay=".1s">
+          <ul class="breadcrumb_nav ul_li_right clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li>About Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- breadcrumb_section - end
+			================================================== -->
+
+
+  <!-- about_section - start
+			================================================== -->
+  <section class="about_section sec_ptb_130 clearfix">
+    <div class="container">
+      <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+
+        <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+          <div class="about_image_1 wow fadeInUp2" data-wow-delay=".1s">
+            <img src="assets/images/about/img_01.png" alt="image_not_found">
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+          <div class="about_content">
+            <div class="section_title wow fadeInUp2" data-wow-delay=".1s">
+              <h4 class="small_title">About Our Company</h4>
+              <h2 class="big_title mb-0">
+                Printing Your Dream Works With Printem
+              </h2>
+              <span class="biggest_title">About</span>
+            </div>
+
+            <p class="wow fadeInUp2" data-wow-delay=".2s">
+              <span>
+                We are a renowned Supplier and Exporter of all types of papers in the global market. We have successfully touched the summit in the market and have gained a huge clientele with our qualitative product range. Our extensive range of products includes A4 Copy Papers, Duplex Boards Papers, Kraft Papers, etc... Our strategic advice, coupled with prudent risk management, has helped us to perform to their revenue budget and beyond.
+                COMPANY OPERATING IN THAILAND AND SOUTH AFRICA strategically to ease global supply. We have over 10 years of combined experience in all facets of this line of business. The CEO of the company has some principle objectives following which he has gained huge success in this industry. We have the necessary personnel, expertise, and resources to provide our clients with a complete range of services necessary to maximize their rural investment.
+                All our products are manufactured as per buyer's specifications – Private Label requirements, to meet import Country regulations for size, ruling format, language, packing, display needs, and above all budget.
+              </span>
+            </p>
+            <!-- <p class="mb-0 wow fadeInUp2" data-wow-delay=".3s">
+              It is our mission to provide high quality and cost-effective Copy Papers & Kraft Papers along with innovative solutions to meet the needs of our customers, while at the same time we are equally committed to carrying out our business activities following fair business practices and the high ethical code of conduct standards we have set for ourselves. It is also our commitment to give our customers a rich and fulfilling experience and we endeavor to build a strong and lasting relationship based on the solid foundation of mutual trust and understanding, both with our principals as well as our customers.
+            </p> -->
+
+            <div class="row wow fadeInUp2" data-wow-delay=".4s">
+              <p>Company registration documents are sent to genuine customers directly by mail or fax.</p>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="about_certificate clearfix">
+                  <div class="item_icon">
+                    <img src="assets/images/about/iso.png" alt="iso_not_found">
+                  </div>
+                  <div class="item_content">
+                    <h3 class="item_title">ISO Certified</h3>
+                    <p>
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="about_certificate clearfix">
+                  <div class="item_icon">
+                    <img src="assets/images/about/reward.png" alt="iso_not_found">
+                  </div>
+                  <div class="item_content">
+                    <h3 class="item_title">Award Wins</h3>
+                    <p>
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- about_section - end
+			================================================== -->
+
+  <!-- faq_section - start
+			================================================== -->
+  <section class="faq_section bg_default_blue clearfix">
+    <div class="container-fluid p-0">
+      <div
+        class="row no-gutters align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+
+        <div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+          <div class="faq_image wow fadeIn" data-wow-delay=".1s">
+            <img src="assets/images/faqs/img_01.jpg" alt="image_not_found">
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+          <div class="faq_content_wrap text-white">
+            <div class="section_title mb_50 wow fadeInUp2" data-wow-delay=".3s">
+              <h4 class="small_title">Faq</h4>
+              <h2 class="big_title text-white mb-0">
+                Frequently Asked Questions
+              </h2>
+              <span class="biggest_title">Faq</span>
+            </div>
+
+            <div id="faq_accordion" class="faq_accordion wow fadeInUp2" data-wow-delay=".4s">
+              <div class="card">
+                <div class="card-header" id="heading_one">
+                  <button data-toggle="collapse" data-target="#collapse_one" aria-expanded="true"
+                    aria-controls="collapse_one">
+                    What's our clientele
+                  </button>
+                </div>
+
+                <div id="collapse_one" class="collapse show" aria-labelledby="heading_one" data-parent="#faq_accordion">
+                  <div class="card-body">
+                    <p class="mb-0">
+                      We are dealing in Copy & Kraft paper corrugators having manual, semi-automatic & fully automatic plants. We are involved in supplying the Copy Papers for the office house & Kraft Papers to corrugating plants, which converts these papers into corrugated carton boxes used in all major industries for packing the products. Our clients have been nurtured by us for over one decade by building and maintaining very close rapport at all levels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading_two">
+                  <button class="collapsed" data-toggle="collapse" data-target="#collapse_two" aria-expanded="false"
+                    aria-controls="collapse_two">
+                    What's our vision
+                  </button>
+                </div>
+                <div id="collapse_two" class="collapse" aria-labelledby="heading_two" data-parent="#faq_accordion">
+                  <div class="card-body">
+                    <p class="mb-0">
+                      Our management’s foresightedness keeps us analyzing our working environment at every step so that we can achieve our goal as a valued player in the global pulp, paper, and paperboard industry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="card">
+                <div class="card-header" id="heading_three">
+                  <button class="collapsed" data-toggle="collapse" data-target="#collapse_three" aria-expanded="false"
+                    aria-controls="collapse_three">
+                    Mirage Deep Dive: Understanding Factories, Fixtures
+                  </button>
+                </div>
+                <div id="collapse_three" class="collapse" aria-labelledby="heading_three" data-parent="#faq_accordion">
+                  <div class="card-body">
+                    <p class="mb-0">
+                      But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                      born and I will give you a complete account of the system, and expound the actual teachings of the
+                      great explorer
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="heading_four">
+                  <button class="collapsed" data-toggle="collapse" data-target="#collapse_four" aria-expanded="false"
+                    aria-controls="collapse_four">
+                    How To Run The Right Kind Of Research Study
+                  </button>
+                </div>
+                <div id="collapse_four" class="collapse" aria-labelledby="heading_four" data-parent="#faq_accordion">
+                  <div class="card-body">
+                    <p class="mb-0">
+                      But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                      born and I will give you a complete account of the system, and expound the actual teachings of the
+                      great explorer
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- faq_section - end
+			================================================== -->
+
+  <!-- testimonial_section - start
+			================================================== -->
+  <section class="testimonial_section sec_ptb_130 bg_gray clearfix">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-7 col-sm-9">
+          <div class="section_title text-center mb_30 wow fadeInUp2" data-wow-delay=".1s">
+            <h4 class="small_title">Clients Reviews</h4>
+            <h2 class="big_title mb-0">
+              What Our Clients Say About Our Works
+            </h2>
+            <span class="biggest_title">Says</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial_carousel column_3_carousel owl-carousel owl-theme wow fadeInUp2" data-wow-delay=".3s">
+        <div class="item">
+          <div class="testimonial_primary">
+            <div class="content_wrap">
+              <p>
+                Would like to order more than the last quantity, hope you can supply, about a half more.
+              </p>
+              <span class="quote_icon">
+                <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+              </span>
+            </div>
+            <div class="hero_info_wrap">
+              <div class="hero_thumbnail">
+                <img src="assets/images/testimonial/img_01.png" alt="icon_not_found">
+              </div>
+              <div class="hero_info">
+                <h3 class="hero_name">Casey M. Vargas</h3>
+                <!-- <span class="hero_title">Web designer</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="testimonial_primary">
+            <div class="content_wrap">
+              <p>
+                Had a missing color in my previous command from the color papers. Nevertheless, the quality is outstanding. Would like to make some modifications to fill the gap.
+              </p>
+              <span class="quote_icon">
+                <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+              </span>
+            </div>
+            <div class="hero_info_wrap">
+              <div class="hero_thumbnail">
+                <img src="assets/images/testimonial/img_02.png" alt="icon_not_found">
+              </div>
+              <div class="hero_info">
+                <h3 class="hero_name">Westover Charles</h3>
+                <!-- <span class="hero_title">Web designer</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="item">
+          <div class="testimonial_primary">
+            <div class="content_wrap">
+              <p>
+                Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremq
+                ue laudantium totam rem aperiam eaqupsa quae abillo inventore veritatis et quasi arch
+                itecto beatae vitae dicta sunt
+              </p>
+              <span class="quote_icon">
+                <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+              </span>
+            </div>
+            <div class="hero_info_wrap">
+              <div class="hero_thumbnail">
+                <img src="assets/images/testimonial/img_03.png" alt="icon_not_found">
+              </div>
+              <div class="hero_info">
+                <h3 class="hero_name">Westover Charles</h3>
+                <span class="hero_title">Web designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="testimonial_primary">
+            <div class="content_wrap">
+              <p>
+                Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremq
+                ue laudantium totam rem aperiam eaqupsa quae abillo inventore veritatis et quasi arch
+                itecto beatae vitae dicta sunt
+              </p>
+              <span class="quote_icon">
+                <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+              </span>
+            </div>
+            <div class="hero_info_wrap">
+              <div class="hero_thumbnail">
+                <img src="assets/images/testimonial/img_01.png" alt="icon_not_found">
+              </div>
+              <div class="hero_info">
+                <h3 class="hero_name">Casey M. Vargas</h3>
+                <span class="hero_title">Web designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="testimonial_primary">
+            <div class="content_wrap">
+              <p>
+                Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremq
+                ue laudantium totam rem aperiam eaqupsa quae abillo inventore veritatis et quasi arch
+                itecto beatae vitae dicta sunt
+              </p>
+              <span class="quote_icon">
+                <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+              </span>
+            </div>
+            <div class="hero_info_wrap">
+              <div class="hero_thumbnail">
+                <img src="assets/images/testimonial/img_02.png" alt="icon_not_found">
+              </div>
+              <div class="hero_info">
+                <h3 class="hero_name">Westover Charles</h3>
+                <span class="hero_title">Web designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="testimonial_primary">
+            <div class="content_wrap">
+              <p>
+                Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremq
+                ue laudantium totam rem aperiam eaqupsa quae abillo inventore veritatis et quasi arch
+                itecto beatae vitae dicta sunt
+              </p>
+              <span class="quote_icon">
+                <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+              </span>
+            </div>
+            <div class="hero_info_wrap">
+              <div class="hero_thumbnail">
+                <img src="assets/images/testimonial/img_03.png" alt="icon_not_found">
+              </div>
+              <div class="hero_info">
+                <h3 class="hero_name">Westover Charles</h3>
+                <span class="hero_title">Web designer</span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+    </div>
+  </section>
+  <!-- testimonial_section - end
+			================================================== -->
+</main>

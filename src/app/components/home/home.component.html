@@ -1,0 +1,472 @@
+<!-- main body - start
+		================================================== -->
+<main class="mt-0">
+
+
+  <!-- sidebar mobile menu - start
+			================================================== -->
+  <div class="sidebar-menu-wrapper">
+    <div class="sidebar_mobile_menu">
+
+      <span class="close_btn"><i class="fal fa-times"></i></span>
+
+      <div class="mobile_menu_list clearfix">
+        <ul class="ul_li_block clearfix">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Conatct</a></li>
+          <li class="dropdown">
+            <a href="/products/category/waste-papers" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paper Scraps</a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let product of waste_papers"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.id}}</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/products/category/plastic-scrap" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plastic Scraps</a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let product of plastic_scrap"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/products/category/metal-scrap" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Metal Scraps</a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let product of metal_scrap"><a href="/category/{{product.category}}/product/{{product.id}}">{{product.name}}</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <div class="overlay"></div>
+  </div>
+  <!-- sidebar mobile menu - end
+			================================================== -->
+
+  <!-- slider_section - start
+			================================================== -->
+  <section class="slider_section home_three_slider clearfix">
+    <div class="main_slider owl-carousel owl-theme clearfix">
+
+      <div class="item" data-background="assets/images/slider/bg-02.jpg">
+        <div class="container">
+          <div
+            class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+            <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
+              <div class="slider_image">
+                <img src="assets/images/slider/bg-02.jpg" alt="image_not_found">
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+              <div class="slider_content text-white">
+                <h4 class="small_title">Welcome to Golden Global Service</h4>
+                <h3 class="item_title text-uppercase text-white mb-0">G.G-SERVICES</h3>
+                <p>
+                  We supply all sorts of waste papers and from those waste papers, we make customizable printing as following the user's guide.
+                </p>
+                <ul class="btns_group ul_li clearfix">
+                  <li>
+                    <a class="custom_btn bg_default_orange" target="_blank" href="/about">
+                      About Us
+                      <span><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="custom_btn bg_default_yellow" target="_blank" href="/contact">
+                      Contact Us
+                      <span><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item" data-background="assets/images/slider/bg-03.jpg">
+        <div class="container">
+          <div
+            class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+            <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
+              <div class="slider_image">
+                <img src="assets/images/slider/bg-03.jpg" alt="image_not_found">
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+              <div class="slider_content text-white">
+                <h4 class="small_title">Welcome to Global Golden Service</h4>
+                <h4 class="item_title text-uppercase text-white mb-0">G.G-SERVICES</h4>
+                <p>
+                  We supply all sorts of waste papers and from those waste papers, we make customizable printing as following the user's guide.
+                </p>
+                <ul class="btns_group ul_li clearfix">
+                  <li>
+                    <a class="custom_btn bg_default_orange" target="_blank" href="/about">
+                      About Us
+                      <span><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="custom_btn bg_default_yellow" target="_blank" href="/contact">
+                      Contact Us
+                      <span><i class="fal fa-arrow-right"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- slider_section - end
+			================================================== -->
+
+
+  <!-- feature_section - start
+			================================================== -->
+  <section class="feature_section sec_ptb_130 bg_gray deco_wrap clearfix">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12">
+          <div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
+            <h4 class="small_title">Our Core Features</h4>
+            <h2 class="big_title mb-0">
+              Experience Allows Us To Printing Things
+            </h2>
+            <span class="biggest_title">Features</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stairs_wrap row justify-content-lg-between justify-content-md-center justify-content-md-center">
+        <div class="stair_col col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".3s" >
+          <div class="feature_card">
+            <a class="item_image plus_effect" href="/products/category/waste-papers">
+              <img src="{{waste_paper_product.image}}" alt="{{waste_paper_product.name}}">
+            </a>
+            <div class="item_content">
+              <span class="item_type">Waste Papers</span>
+              <h3 class="item_title">{{waste_paper_product.name}}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="stair_col col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".5s" >
+          <div class="feature_card">
+            <a class="item_image plus_effect" href="/products/category/paper-type">
+              <img src="{{paper_type_product.image}}" alt="{{paper_type_product.name}}">
+            </a>
+            <div class="item_content">
+              <span class="item_type">All Paper Types</span>
+              <h3 class="item_title">{{paper_type_product.name}}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="stair_col col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".7s">
+          <div class="feature_card">
+            <a class="item_image plus_effect" href="/products/category/copy-paper">
+              <img src="{{color_product.image}}" alt="{{color_product.name}}">
+            </a>
+            <div class="item_content">
+              <span class="item_type">Printing Copy Papers</span>
+              <h3 class="item_title">{{color_product.name}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="deco_image triangle_shape wow fadeInUp2" data-wow-delay=".1s"></span>
+  </section>
+  <!-- feature_section - end
+			================================================== -->
+
+
+  <!-- whoweare_section - start
+			================================================== -->
+  <section class="whoweare_section bg_default_yellow clearfix">
+    <div class="container-fluid p-0">
+      <div
+        class="row no-gutters align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+          <div class="whoweare_image wow fadeIn">
+            <img src="assets/images/about/bg-12.png" alt="icon_not_found">
+            <!-- <a class="play_btn popup_video bg_white" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+              <i class="fas fa-play"></i>
+            </a> -->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="whoweare_content">
+            <div class="section_title mb_50 wow fadeInUp2" data-wow-delay=".2s">
+              <h4 class="small_title">Paper Waste Disposal</h4>
+              <h4 class="big_title mb-0">
+                What types of paper can be recycled?
+              </h4>
+              <span class="biggest_title">We Do</span>
+            </div>
+
+            <div class="whoweare_about_content wow fadeInUp2" data-wow-delay=".3s">
+              <p>
+                There are three different types of paper that can be recycled;
+
+                These are known as ‘mill broke’ – this is essentially any paper scrap or trimmings that come from the
+                manufacturing of paper, this generally gets recycled internally by the paper mills.
+
+                There is also ‘pre-consumer waste’. This is paper that has been sent away from the paper mill but then
+                discarded prior to being used by a consumer.
+
+                Finally, there is ‘post-consumer waste’ – this is any paper material that has been received and used by
+                a consumer and then discarded, such as newspapers.
+              </p>
+              <!-- <div class="avatar_wrap">
+                <div class="avatar_image">
+                  <img src="assets/images/meta/img_01.png" alt="image_not_found">
+                </div>
+                <div class="avatar_content">
+                  <h4 class="avatar_name">Kristofer C. Bello</h4>
+                  <span class="avatar_title">CEO &amp; Founder</span>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- whoweare_section - end
+			================================================== -->
+
+
+  <!-- service_section - start
+			================================================== -->
+  <!-- <section class="service_section sec_ptb_130 clearfix">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+          <div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
+            <h4 class="small_title">What We Offers</h4>
+            <h2 class="big_title mb-0">
+              We Provide Lot’s Of Waste Paper Types. Here Are Some
+            </h2>
+            <span class="biggest_title">Services</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row no-gutters justify-content-lg-between">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeIn" data-wow-delay=".3s">
+          <div class="service_split clearfix">
+            <div class="item_content">
+              <div class="service_boxed bg_default_yellow text-center">
+                <div class="item_icon">
+                  <img src="assets/images/services/icon_02.png" alt="{{color_product.name}}">
+                </div>
+                <h3 class="item_title">{{color_product.name}}</h3>
+                <a class="text_btn" target="_blank" href="/category/{{color_product.category}}/product/{{color_product.id}}">
+                  <span>Read More</span>
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <a class="item_image" target="_blank" href="/category/{{color_product.category}}/product/{{color_product.id}}">
+              <img src="{{color_product.image}}" alt="image_not_found">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeIn" data-wow-delay=".4s">
+          <div class="service_split clearfix">
+            <div class="item_content">
+              <div class="service_boxed bg_default_blue text-center text-white">
+                <div class="item_icon">
+                  <img src="assets/images/services/icon_03.png" alt="icon_not_found">
+                </div>
+                <h3 class="item_title">{{thermal_product.name}}</h3>
+                <a class="text_btn" href="/category/{{thermal_product.category}}/product/{{thermal_product.id}}">
+                  <span>Read More</span>
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <a class="item_image" href="/category/{{thermal_product.category}}/product/{{thermal_product.id}}">
+              <img src="{{thermal_product.image}}" alt="image_not_found">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeIn" data-wow-delay=".5s">
+          <div class="service_split clearfix">
+            <a class="item_image" href="/category/{{magazine_product.category}}/product/{{magazine_product.id}}">
+              <img src="{{magazine_product.image}}" alt="image_not_found">
+            </a>
+            <div class="item_content">
+              <div class="service_boxed bg_default_orange text-center text-white">
+                <div class="item_icon">
+                  <img src="assets/images/services/icon_04.png" alt="icon_not_found">
+                </div>
+                <h3 class="item_title">{{magazine_product.name}}</h3>
+                <a class="text_btn" href="/category/{{magazine_product.category}}/product/{{magazine_product.id}}">
+                  <span>Read More</span>
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeIn" data-wow-delay=".6s">
+          <div class="service_split clearfix">
+            <a class="item_image" target="_blank" href="/category/{{kraft_product.category}}/product/{{kraft_product.id}}">
+              <img src="{{kraft_product.image}}" alt="image_not_found">
+            </a>
+            <div class="item_content">
+              <div class="service_boxed bg_default_past text-center text-white">
+                <div class="item_icon">
+                  <img src="assets/images/services/icon_06.png" alt="icon_not_found">
+                </div>
+                <h3 class="item_title">{{kraft_product.name}}</h3>
+                <a class="text_btn" target="_blank" href="/category/{{kraft_product.category}}/product/{{kraft_product.id}}">
+                  <span>Read More</span>
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+  <!-- service_section - end
+			================================================== -->
+
+  <!-- portfolio_section - start
+			================================================== -->
+  <section class="portfolio_section sec_ptb_130 pb-0 clearfix">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+          <div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
+            <h4 class="small_title">Our Offers</h4>
+            <h2 class="big_title mb-0">
+              Some Available Products
+            </h2>
+            <span class="biggest_title">Papers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="masonry_portfolio_grid grid wow fadeInUp2" data-wow-delay=".3s">
+        <div class="grid-sizer"></div>
+        <div class="grid-item" *ngFor="let product of pets">
+          <div class="portfolio_fullimage">
+            <a class="plus_effect" target="_blank" href="/category/{{product.category}}/product/{{product.id}}">
+              <img src="{{product.image}}" alt="{{product.name}}">
+            </a>
+            <!-- <h2>{{product.name}}</h2> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- portfolio_section - end
+			================================================== -->
+
+
+  <!-- testimonial_section - start
+			================================================== -->
+  <section class="testimonial_section sec_ptb_130 clearfix">
+    <div class="container position-relative">
+
+      <div class="row justify-content-lg-start">
+        <div class="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+          <div class="section_title mb_80 wow fadeInUp2" data-wow-delay=".1s">
+            <h4 class="small_title">Clients Reviews</h4>
+            <h2 class="big_title mb-0">
+              What Our Clients Say About Our Works
+            </h2>
+            <span class="biggest_title">Says</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-between">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 order-last">
+          <div class="testimonial_person_image wow fadeInUp2" data-wow-delay=".3s">
+            <img src="assets/images/testimonial/img_06.jpg" alt="image_not_found">
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+          <div class="creative_testimonial_carousel owl-carousel owl-theme wow fadeInUp2" data-wow-delay=".5s">
+            <div class="item">
+              <div class="testimonial_primary">
+                <div class="content_wrap">
+                  <p>
+                    Would like to order more than the last quantity, hope you can supply, about a half more.
+                  </p>
+                  <span class="quote_icon">
+                    <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+                  </span>
+                </div>
+                <div class="hero_info_wrap">
+                  <div class="hero_thumbnail">
+                    <img src="assets/images/testimonial/img_01.png" alt="icon_not_found">
+                  </div>
+                  <div class="hero_info">
+                    <h3 class="hero_name">Casey M. Vargas</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="testimonial_primary">
+                <div class="content_wrap">
+                  <p>
+                    Had a missing color in my previous command from the color papers. Nevertheless, the quality is outstanding. Would like to make some modifications to fill the gap.
+                  </p>
+                  <span class="quote_icon">
+                    <img src="assets/images/testimonial/quote_01.png" alt="icon_not_found">
+                  </span>
+                </div>
+                <div class="hero_info_wrap">
+                  <div class="hero_thumbnail">
+                    <img src="assets/images/testimonial/img_02.png" alt="icon_not_found">
+                  </div>
+                  <div class="hero_info">
+                    <h3 class="hero_name">Casey M. Vargas</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="orange_shape wow fadeInUp2" data-wow-delay=".1s"></div>
+
+    </div>
+  </section>
+  <!-- testimonial_section - end
+			================================================== -->
+
+</main>
+<!-- main body - end
+		================================================== -->
